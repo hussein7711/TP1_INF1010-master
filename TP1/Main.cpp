@@ -19,7 +19,7 @@ int main()
 
 	//1-  Creez 15 objets du classe produit
     
-    //salut salut comment sa va?
+    //salut salut comment sa va?  bien
     
 	//2-  Modifiez le nom, la référence, le prix de  troisieme objet Produit créé
     //   afficher les attributs de cet objet Produit
