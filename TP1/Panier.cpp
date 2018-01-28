@@ -6,7 +6,6 @@
 #include <string>;
 #include "panier.h"
 #include "Produit.h"
-#include "Produit.cpp"
 using namespace std;
 
 
