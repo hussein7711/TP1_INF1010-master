@@ -9,7 +9,7 @@
 
 #ifndef PANIER_H
 #define PANIER_H
-#endif
+
 class Panier
 {
 public:
@@ -34,5 +34,5 @@ private:
     double totalAPayer_;
 };
 
-
+#endif
 

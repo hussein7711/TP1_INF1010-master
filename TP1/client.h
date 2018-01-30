@@ -6,7 +6,7 @@
 
 #ifndef CLIENT_H
 #define CLIENT_H
-#endif
+
 #include <string>
 #include "panier.h"
 using namespace std;
@@ -45,3 +45,4 @@ private:
     Panier *  monPanier_;
 };
  /* client_h */
+#endif

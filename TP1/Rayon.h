@@ -6,7 +6,7 @@
 
 #ifndef RAYON_H
 #define RAYON_H
-#endif
+
 #include <string>
 #include "Produit.h"
 using namespace std;
@@ -42,3 +42,4 @@ private:
 	int nombreProduits_;
 
 };
+#endif
