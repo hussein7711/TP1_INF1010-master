@@ -1,6 +1,4 @@
-#ifndef PANIER_H
-#define PANIER_H
-#endif
+
 
 #include <iostream>;
 #include <string>;

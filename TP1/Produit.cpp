@@ -1,7 +1,3 @@
-#ifndef Produit_H
-#define Produit_H
-#endif
-
 #include <iostream>;
 #include <string>;
 #include "Produit.h"

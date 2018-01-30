@@ -1,7 +1,3 @@
-#ifndef RAYON_H
-#define RAYON_H
-#endif
-
 #include <iostream>;
 #include <string>;
 #include "Rayon.h"
