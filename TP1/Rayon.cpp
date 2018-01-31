@@ -14,17 +14,17 @@ Rayon::Rayon(string categorie) {
 	categorie_ = categorie;
 }
 
-string Rayon::obtenirCategorie() {
+string Rayon::obtenirCategorie() const {
 	return categorie_;
 }
-int Rayon::obtenirNombreProduits() {
+int Rayon::obtenirNombreProduits() const {
 	return nombreProduits_;
 }
 
-int Rayon::obtenirCapaciteProduits() {
+int Rayon::obtenirCapaciteProduits() const {
 	return capaciteProduits_;
 }
-Produit** Rayon::obtenirTousProduits() {
+Produit** Rayon::obtenirTousProduits() const {
 	for (int i = 0; i < obtenirNombreProduits(); i++)
 		return &tousProduits_[i];
 }
@@ -52,7 +52,7 @@ void Rayon::ajouterProduit(Produit * produit) {
 	}
 }
 
-void Rayon::afficher() {
+void Rayon::afficher() const {
 	cout << obtenirCategorie() << endl << obtenirNombreProduits() << endl << obtenirCapaciteProduits() << endl << obtenirTousProduits();
 }
 

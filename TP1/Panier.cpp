@@ -15,15 +15,15 @@ Panier::Panier(int capacite) {
 	totalAPayer_ = 0;
 }
 
-Produit **  Panier::obtenirContenuPanier() {
+Produit **  Panier::obtenirContenuPanier() const {
 	for (int i = 0; i < obtenirNombreContenu(); i++)
 		return &contenuPanier_[i];
 }
 
-int Panier::obtenirNombreContenu() {
+int Panier::obtenirNombreContenu() const {
 	return nombreContenu_;
 }
-double Panier::obtenirTotalApayer() {
+double Panier::obtenirTotalApayer() const {
 	return totalAPayer_;
 }
 
@@ -53,7 +53,7 @@ void Panier::livrer() {
 	totalAPayer_ = 0;
 }
 
-void Panier::afficher() {
+void Panier::afficher() const {
 	cout << obtenirContenuPanier() << endl << obtenirNombreContenu() << endl << obtenirTotalApayer();
 }
 

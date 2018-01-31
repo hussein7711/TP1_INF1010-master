@@ -15,19 +15,18 @@ using namespace std;
 
 int main()
 {
-	cout << "salut";
+
 	//C'est à vous de voir si vous devez allouer dynamiquement ou non les élèments
 
 	//1-  Creez 15 objets du classe produit
     
-    //salut salut comment sa va?  bien
     
 	//2-  Modifiez le nom, la référence, le prix de  troisieme objet Produit créé
     //   afficher les attributs de cet objet Produit
  
 	
 	//3-  Creez un objet du classe rayon à l'aide du constructeur par défaut
-   
+
 	//4-  Modifiez la catégorie  du rayon
    
     // 5- Ajouter 6 produits de  voret chaoix dans le rayon créé
