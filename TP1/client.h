@@ -13,7 +13,7 @@ using namespace std;
 class Client
 {
 public:
-    Client (string  nom,  string prenom, int identifiant, string codePostal,  long date);
+    Client(string  nom,  string prenom, int identifiant, string codePostal,  long date);
     // methodes d'acces
     
     string obtenirNom() const;
@@ -30,7 +30,7 @@ public:
     void modifierDateNaissance(long date);
     
     // autres méthodes
-    void acheter (Produit * prod);
+    void acheter(Produit * prod);
     void afficherPanier() const;
     void livrerPanier();
     

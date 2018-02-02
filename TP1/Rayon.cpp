@@ -12,6 +12,9 @@ Rayon::Rayon() {
 
 Rayon::Rayon(string categorie) {
 	categorie_ = categorie;
+	tousProduits_ = NULL;
+	capaciteProduits_ = 0;
+	nombreProduits_ = 0;
 }
 
 string Rayon::obtenirCategorie() const {
@@ -37,7 +40,7 @@ void Rayon::ajouterProduit(Produit * produit) {
 	if (tousProduits_ == NULL) {
 		tousProduits_ = new Produit*[5];
 		capaciteProduits_ = 5;
-		tousProduits_[nombreProduits_++] = produit;
+		tousProduits_[0] = produit; nombreProduits_++;
 	}
 	else if (nombreProduits_ >= capaciteProduits_) {
 		Produit** nouveauTableau;
@@ -50,6 +53,8 @@ void Rayon::ajouterProduit(Produit * produit) {
 		tousProduits_ = nouveauTableau;
 		tousProduits_[nombreProduits_++] = produit;
 	}
+	else
+		tousProduits_[nombreProduits_++] = produit;
 }
 
 void Rayon::afficher() const {

@@ -2,7 +2,7 @@
 #include <string>
 #include "client.h"
 #include "panier.h"
-#include "Panier.cpp"
+//#include "Panier.cpp"
 using namespace std;
 
 Client::Client(string  nom, string prenom, int identifiant, string codePostal, long date) {
@@ -55,7 +55,7 @@ void Client::modifierDateNaissance(long date) {
 }
 
 void Client::acheter(Produit* prod) {
-	if (monPanier_) {
+	if (monPanier_!= NULL) {
 		(*monPanier_).ajouter(prod);
 	}
 	else {
