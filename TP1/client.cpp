@@ -13,6 +13,9 @@ Client::Client(string  nom, string prenom, int identifiant, string codePostal, l
 	dateNaissance_ = date;
 	monPanier_ = nullptr;
 }
+Client::~Client() {
+
+}
 
 string Client::obtenirNom() const {
 	return nom_;
@@ -55,18 +58,17 @@ void Client::modifierDateNaissance(long date) {
 }
 
 void Client::acheter(Produit* prod) {
-	if (monPanier_!= nullptr) {
+	if (monPanier_ != nullptr) {
 		monPanier_->ajouter(prod);
 	}
 	else {
 		Panier* monPanier_ = new Panier(4);
 		monPanier_->ajouter(prod);
-		monPanier_->obtenirContenuPanier();
 	}
 }
 
 void Client::afficherPanier() const {
-	if(monPanier_!= nullptr)
+	if(monPanier_ != nullptr)
 		monPanier_->afficher();
 }
 
@@ -74,3 +76,6 @@ void Client::livrerPanier() {
 	monPanier_->livrer();
 }
 
+void Client::afficher() {
+	cout << prenom_ << ' ' << nom_ << ' ' << identifiant_ << ' ' << dateNaissance_ << ' ' << codePostal_ << endl;
+}

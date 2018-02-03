@@ -16,6 +16,9 @@ Rayon::Rayon(string categorie) {
 	capaciteProduits_ = 0;
 	nombreProduits_ = 0;
 }
+Rayon::~Rayon() {
+
+}
 
 string Rayon::obtenirCategorie() const {
 	return categorie_;

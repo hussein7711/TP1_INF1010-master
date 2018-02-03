@@ -27,9 +27,12 @@ Panier::Panier(int capacite) {
 	nombreContenu_ = 0;
 	totalAPayer_ = 0;
 }
+Panier::~Panier() {
+
+}
 
 Produit**  Panier::obtenirContenuPanier() const {
-	for (int i = 0; i < obtenirNombreContenu(); i++)
+	for (int i = 0; i < nombreContenu_; i++)
 		return &contenuPanier_[i];
 }
 

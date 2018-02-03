@@ -15,6 +15,10 @@ Produit::Produit(string nom, int reference, double prix) {
 	prix_ = prix;
 }
 
+Produit::~Produit() {
+
+}
+
 string Produit::obtenirNom() const {
 	return nom_;
 }
@@ -40,7 +44,7 @@ void Produit::modifierPrix(double nouveauPrix){
 }
 
 void Produit::afficher() const {
-	cout << nom_ << " " << reference_ << " " << prix_;
+	cout << nom_ << " " << reference_ << " " << prix_ << endl;
 }
 
 

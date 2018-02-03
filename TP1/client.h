@@ -14,6 +14,7 @@ class Client
 {
 public:
     Client(string  nom,  string prenom, int identifiant, string codePostal,  long date);
+	~Client();
     // methodes d'acces
     
     string obtenirNom() const;
@@ -31,6 +32,7 @@ public:
     
     // autres méthodes
     void acheter(Produit * prod);
+	void afficher();
     void afficherPanier() const;
     void livrerPanier();
     
