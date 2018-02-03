@@ -11,7 +11,7 @@ Client::Client(string  nom, string prenom, int identifiant, string codePostal, l
 	identifiant_ = identifiant;
 	codePostal_ = codePostal;
 	dateNaissance_ = date;
-	monPanier_ = NULL;
+	monPanier_ = nullptr;
 }
 
 string Client::obtenirNom() const {
@@ -55,22 +55,22 @@ void Client::modifierDateNaissance(long date) {
 }
 
 void Client::acheter(Produit* prod) {
-	if (monPanier_!= NULL) {
-		(*monPanier_).ajouter(prod);
+	if (monPanier_!= nullptr) {
+		monPanier_->ajouter(prod);
 	}
 	else {
-		Panier monPanier_(4);
-		monPanier_.ajouter(prod);
+		Panier* monPanier_ = new Panier(4);
+		monPanier_->ajouter(prod);
+		monPanier_->obtenirContenuPanier();
 	}
 }
 
 void Client::afficherPanier() const {
-	if(monPanier_!= NULL)
-	(*monPanier_).obtenirContenuPanier();
+	if(monPanier_!= nullptr)
+		monPanier_->afficher();
 }
 
 void Client::livrerPanier() {
 	monPanier_->livrer();
-	delete monPanier_;
 }
 

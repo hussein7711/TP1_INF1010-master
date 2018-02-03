@@ -42,7 +42,7 @@ private:
     int identifiant_;
     string codePostal_;
     long dateNaissance_;
-    Panier *  monPanier_;
+    Panier* monPanier_;
 };
  /* client_h */
 #endif

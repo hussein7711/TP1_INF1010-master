@@ -5,14 +5,14 @@ using namespace std;
 
 Rayon::Rayon() {
 	categorie_ = "inconnu";
-	tousProduits_ = NULL;
+	tousProduits_ = nullptr;
 	capaciteProduits_ = 0;
 	nombreProduits_ = 0;
 }
 
 Rayon::Rayon(string categorie) {
 	categorie_ = categorie;
-	tousProduits_ = NULL;
+	tousProduits_ =	nullptr;
 	capaciteProduits_ = 0;
 	nombreProduits_ = 0;
 }
@@ -37,18 +37,25 @@ void Rayon::modifierCategorie(string cat) {
 }
 
 void Rayon::ajouterProduit(Produit * produit) {
-	if (tousProduits_ == NULL) {
+	if (tousProduits_ == nullptr) {
 		tousProduits_ = new Produit*[5];
 		capaciteProduits_ = 5;
-		tousProduits_[0] = produit; nombreProduits_++;
+		for (int i = 0; i < capaciteProduits_; i++)
+		{
+			tousProduits_[i] = new Produit;
+		}
+		tousProduits_[nombreProduits_++] = produit;
 	}
 	else if (nombreProduits_ >= capaciteProduits_) {
 		Produit** nouveauTableau;
 		capaciteProduits_ += 5;
 		nouveauTableau = new Produit*[capaciteProduits_];
 
-		for (int i = 0; i < obtenirNombreProduits(); i++)
+		for (int i = 0; i < capaciteProduits_; i++) {
+			nouveauTableau[i] = new Produit;
 			nouveauTableau[i] = tousProduits_[i];
+		}
+			
 		delete[] tousProduits_;
 		tousProduits_ = nouveauTableau;
 		tousProduits_[nombreProduits_++] = produit;
@@ -58,7 +65,11 @@ void Rayon::ajouterProduit(Produit * produit) {
 }
 
 void Rayon::afficher() const {
-	cout << obtenirCategorie() << endl << obtenirNombreProduits() << endl << obtenirCapaciteProduits() << endl << obtenirTousProduits();
+	cout << obtenirCategorie() << endl << obtenirNombreProduits() << endl << obtenirCapaciteProduits() << endl;
+	for (int i = 0; i < nombreProduits_; i++)
+	{
+		cout << tousProduits_[i]->obtenirNom() << " " << endl;
+	}
 }
 
 

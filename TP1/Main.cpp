@@ -19,9 +19,9 @@ int main()
 	//C'est à vous de voir si vous devez allouer dynamiquement ou non les élèments
 
 	//1-  Creez 15 objets du classe produit
-	Produit* carrote = new Produit;
-	carrote = &Produit("carrote", 1, 3.25);
-    
+	//Produit* liste[15];
+	Produit* carrote = new Produit("Carotte", 1, 1); 
+	
 	//2-  Modifiez le nom, la référence, le prix de  troisieme objet Produit créé
     //   afficher les attributs de cet objet Produit
  
@@ -40,7 +40,7 @@ int main()
 	Client client = Client("Abricot", "Jean", 1, "AX88", 02022017);
 
 	//8-  afficher l'etat des attributs du client
-	cout << client.obtenirNom() << ' ' << client.obtenirNom() << ' ' << client.obtenirIdentifiant() << ' ' << client.obtenirDateNaissance()<< ' ' << client.obtenirCodePostal() << endl;
+	cout<< client.obtenirPrenom() << ' ' << client.obtenirNom() << ' ' << client.obtenirIdentifiant() << ' ' << client.obtenirDateNaissance()<< ' ' << client.obtenirCodePostal() << endl;
 
 	//9-   Le client achete 9 produits
 	client.acheter(carrote);

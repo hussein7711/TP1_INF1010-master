@@ -13,6 +13,7 @@
 class Panier
 {
 public:
+	Panier();
     Panier (int capacite);
     // methodes d'accès
     Produit **  obtenirContenuPanier() const;
@@ -28,7 +29,7 @@ public:
 
 private:
     
-    Produit ** contenuPanier_;
+    Produit** contenuPanier_;
     int  nombreContenu_;
     int capaciteContenu_;
     double totalAPayer_;
