@@ -22,8 +22,11 @@ Panier::~Panier() {
 }
 
 Produit**  Panier::obtenirContenuPanier() const {
-	for (int i = 0; i < nombreContenu_; i++)
-		return &contenuPanier_[i];
+//	Produit** produit = new Produit*();
+//	for (int i = 0; i < nombreContenu_; i++) {
+//		produit[i] = contenuPanier_[i];
+//	}
+	return this->contenuPanier_;
 }
 
 int Panier::obtenirNombreContenu() const {

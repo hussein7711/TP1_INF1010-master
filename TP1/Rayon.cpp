@@ -31,8 +31,11 @@ int Rayon::obtenirCapaciteProduits() const {
 	return capaciteProduits_;
 }
 Produit** Rayon::obtenirTousProduits() const {
-	for (int i = 0; i < obtenirNombreProduits(); i++)
-		return &tousProduits_[i];
+//	Produit** produit = new Produit*();
+//	for (int i = 0; i < obtenirNombreProduits(); i++) {
+//		produit[i] = tousProduits_[i];
+//	}
+	return this->tousProduits_;
 }
 
 void Rayon::modifierCategorie(string cat) {
