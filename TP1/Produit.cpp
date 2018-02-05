@@ -44,7 +44,7 @@ void Produit::modifierPrix(double nouveauPrix){
 }
 
 void Produit::afficher() const {
-	cout << nom_ << " " << reference_ << " " << prix_ << endl;
+	cout <<" Le produit " << nom_ << ", ID :" << reference_ << ", coute " << prix_ <<" dollard"<<endl;
 }
 
 

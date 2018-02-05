@@ -3,18 +3,8 @@
 #include "panier.h"
 #include "Produit.h"
 using namespace std;
+const string tab = "\t";
 
-Panier::Panier() {
-	capaciteContenu_ = 1;
-	Produit** contenuPanier_;
-	contenuPanier_ = new Produit*[capaciteContenu_];
-	/*for (int i = 0; i < capacite; i++)
-	{
-	contenuPanier_[i] = new Produit;
-	}*/
-	nombreContenu_ = 0;
-	totalAPayer_ = 0;
-}
 
 Panier::Panier(int capacite) {
 	capaciteContenu_ = capacite;

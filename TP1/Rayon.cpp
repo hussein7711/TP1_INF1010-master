@@ -68,10 +68,10 @@ void Rayon::ajouterProduit(Produit * produit) {
 }
 
 void Rayon::afficher() const {
-	cout << obtenirCategorie() << endl << obtenirNombreProduits() << endl << obtenirCapaciteProduits() << endl;
+	cout << "   " << "Rayon " << categorie_ << " avec " << nombreProduits_ << " produit et une capacite de " << capaciteProduits_ << endl << endl;
 	for (int i = 0; i < nombreProduits_; i++)
 	{
-		cout << tousProduits_[i]->obtenirNom() << " " << endl;
+		cout << "-" + tousProduits_[i]->obtenirNom() << " " << endl;
 	}
 }
 

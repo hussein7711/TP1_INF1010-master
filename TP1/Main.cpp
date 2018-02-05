@@ -13,6 +13,10 @@
 
 using namespace std;
 
+
+void separateur() {//ajout d'un separateur pour un meilleur affichage
+	cout << endl << "========================" << endl <<endl;
+}
 int main()
 {
 
@@ -39,7 +43,7 @@ int main()
     //   afficher les attributs de cet objet Produit
 	p3->modifierNom("patate"); p3->modifierReference(16); p3->modifierPrix(1.75);
 	p3->afficher();
-	
+	separateur();
 	//3-  Creez un objet du classe rayon à l'aide du constructeur par défaut
 	Rayon rayon =  Rayon();
 	//4-  Modifiez la catégorie  du rayon
@@ -54,9 +58,9 @@ int main()
 
     // 6- afficher le contenu du rayon
 	rayon.afficher();
-  
+	separateur();
 	//7-  Creez un objet de classe client à l'aide du constructeur
-	Client client = Client("Course", "Jean", 1, "AX88", 02022017);
+	Client client = Client("Course", "Jean", 1, "AX88", 201703);
 
 	//8-  afficher l'etat des attributs du client
 	client.afficher();
@@ -73,6 +77,7 @@ int main()
 
 	//10- Afficher le contenu du panier du client
 	client.afficherPanier();
+	separateur();
      //11- livrer le panier du client
 	client.livrerPanier();
     

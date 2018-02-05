@@ -2,7 +2,6 @@
 #include <string>
 #include "client.h"
 #include "panier.h"
-//#include "Panier.cpp"
 using namespace std;
 
 Client::Client(string  nom, string prenom, int identifiant, string codePostal, long date) {
@@ -77,5 +76,5 @@ void Client::livrerPanier() {
 }
 
 void Client::afficher() {
-	cout << prenom_ << ' ' << nom_ << ' ' << identifiant_ << ' ' << dateNaissance_ << ' ' << codePostal_ << endl;
+	cout << "  "<< prenom_ << ' ' << nom_ << " ID :" << identifiant_ << " ne le " << dateNaissance_ << " et vit au " << codePostal_ << endl;
 }
